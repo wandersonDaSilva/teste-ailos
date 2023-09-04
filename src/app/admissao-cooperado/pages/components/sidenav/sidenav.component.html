@@ -1,0 +1,33 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="mat-elevation-z10" mode="side" opened>
+    <div class="text-center">
+      <img width="100" src="assets/logo/angular_whiteTransparent.png" alt="Minha Figura">
+    </div>
+    <mat-nav-list>
+			<mat-list-item (click)="goChangeRouter('/')">
+        <div class="d-flex text-white align-items-center text-center gap-2">
+          <mat-icon>home</mat-icon>
+          <div>Início</div>
+        </div>
+			</mat-list-item>
+			<mat-list-item (click)="goChangeRouter('page/consulta')">
+        <div class="d-flex text-white align-items-center text-center gap-2">
+          <mat-icon>search</mat-icon>
+          <div>
+            Consultar CPF
+          </div>
+        </div>
+			</mat-list-item>
+		</mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content h-100">
+    <app-toolbar [openClosed]="sidenav"></app-toolbar>
+    <router-outlet></router-outlet>
+
+    <footer class="bg-light d-flex align-items-center">
+      <button *ngIf="newSearch" (click)="startNewConsulta()" class="mx-3" mat-raised-button color="primary">Iniciar nova admissão</button>
+      <button class="mx-3" (click)="openDialog()" mat-stroked-button color="primary">Dicas para admissão</button>
+    </footer>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

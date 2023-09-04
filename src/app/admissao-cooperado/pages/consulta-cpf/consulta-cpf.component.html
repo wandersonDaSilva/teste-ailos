@@ -1,0 +1,30 @@
+<app-steps></app-steps>
+<section>
+  <div>
+    <div>
+      <h1 class="mb-2">Informe o CPF do futuro cooperado (a)</h1>
+      <small>
+        Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente.<br>
+        Digite apenas os números (sem pontos ou traços).
+      </small>
+    </div>
+
+    <div class="mt-3">
+      <form (submit)="searchCpf()" [formGroup]="formGroup">
+        <mat-form-field appearance="outline">
+          <mat-label>CPF</mat-label>
+          <input mask="000.000.000-00" formControlName="cpf" name="cpf" matInput placeholder="Digite seu cpf...">
+          <mat-error>
+            CPF inválido!
+          </mat-error>
+        </mat-form-field>
+
+        <button (click)="searchCpf()" [disabled]="!cpfControl?.value || showInfoCooperador" class="mx-3"
+          mat-raised-button color="primary">Consultar por CPF</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <router-outlet></router-outlet>
+

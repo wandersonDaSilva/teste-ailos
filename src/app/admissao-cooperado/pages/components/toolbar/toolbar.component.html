@@ -1,0 +1,29 @@
+<mat-toolbar class="hei-toolbar text-dark justify-content-between flex-wrap">
+  <div class="d-flex align-items-center flex-wrap">
+    <button mat-button (click)="openClosed.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div>
+      <h1 class="mb-0">NOVA ADMISSÃO COOPERADO</h1>
+      <small class="breadcrumb mb-0">Cadastro / Admissão do Cooperado / Nova Admissão do Cooperado</small>
+    </div>
+  </div>
+  <div class="d-flex align-items-center gap-3 flex-wrap">
+    <mat-icon matBadge="4" matBadgeColor="warn" [matBadgeOverlap]="true" matBadgeSize="small"
+      class="demo-section">notifications</mat-icon>
+    <mat-chip-listbox color="primary" aria-label="Dog selection">
+      <mat-chip class="border border-info bg-transparent">
+        <p class="text-uppercase mb-0 px-3 font-weight-bold"> viacredi </p>
+      </mat-chip>
+    </mat-chip-listbox>
+    <div class="position-relative">
+      <img class="text-center rounded-circle border-info border" width="60" height="60"
+        src="../../../../assets/images/man-156584_1920.png" alt="Minha Figura">
+      <mat-icon [matMenuTriggerFor]="menu" class="text-info position-absolute icon-settings">settings</mat-icon>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item><mat-icon>logout</mat-icon> Sing out</button>
+        <button mat-menu-item><mat-icon>settings_applications</mat-icon> Configurações</button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>

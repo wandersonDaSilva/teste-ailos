@@ -1,0 +1,77 @@
+<section>
+  <div class="grid-system">
+    <!-- Card Situação CPF -->
+    <mat-card (click)="openDialog()" class="example-card cursor-pointer">
+      <mat-card-header>
+        <mat-card-title-group class="mb-3">
+          <mat-card-title>Situação cadastral do CPF</mat-card-title>
+          <mat-card-subtitle>Consulta na Receita Federal</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="d-flex gap-4 align-items-center">
+          <mat-icon class="text-secondary">person</mat-icon>
+          <div class="d-flex flex-column">
+            <small class="text-secondary">Nome</small>
+            {{dataCooperado.name}}
+          </div>
+        </div>
+        <div class="d-flex gap-4 mt-4 align-items-center">
+          <mat-icon class="text-success">check_circle_outline</mat-icon>
+          <div class="d-flex flex-column">
+            <small class="text-secondary">Situação do CPF</small>
+            Regular
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Card Conta Aplicação -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title-group class="mb-3">
+          <mat-card-title>Conta Aplicação</mat-card-title>
+          <mat-card-subtitle>Cooperativa viacredi</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="d-flex gap-4 align-items-center">
+          <mat-icon class="text-secondary">credit_card</mat-icon>
+          <div class="d-flex flex-column">
+            <small class="text-secondary">Número da conta</small>
+            {{accountNumberAplicacao}}
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-footer class="d-flex flex-fill">
+        <mat-card-actions>
+          <button mat-button>Dublicar conta</button>
+        </mat-card-actions>
+      </mat-card-footer>
+    </mat-card>
+
+    <!-- Card Conta Corrente -->
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title-group class="mb-3">
+          <mat-card-title>Conta Corrente</mat-card-title>
+          <mat-card-subtitle>Cooperativa viacredi</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="d-flex gap-4 align-items-center">
+          <mat-icon class="text-secondary">credit_card</mat-icon>
+          <div class="d-flex flex-column">
+            <small class="text-secondary">Número da conta</small>
+            {{accountNumberCorrente}}
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-footer class="d-flex flex-fill">
+        <mat-card-actions>
+          <button mat-button>Dublicar conta</button>
+        </mat-card-actions>
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</section>
